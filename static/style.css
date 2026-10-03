@@ -1,0 +1,306 @@
+/* =========================================================
+   AI GYM COACH — THEME
+   Dark carbon base + electric lime/orange accents, rounded UI
+========================================================= */
+
+:root {
+  --bg: #0B0F0E;
+  --bg-panel: #141B19;
+  --bg-panel-2: #1B2422;
+  --border: rgba(163, 255, 18, 0.14);
+  --accent: #A3FF12;      /* electric lime */
+  --accent-2: #FF6A3D;    /* energy orange */
+  --text: #F2F5F1;
+  --text-dim: rgba(242, 245, 241, 0.62);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --font: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.stApp {
+  background: radial-gradient(circle at 20% 0%, #10201A 0%, #0B0F0E 55%) fixed;
+  color: var(--text);
+}
+
+[data-testid="stSidebar"] {
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border);
+}
+
+.block-container,
+.block-container * {
+  font-family: var(--font) !important;
+}
+
+.block-container {
+  padding: 40px 3rem !important;
+  max-width: 820px !important;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+[data-testid="stMarkdownContainer"] h1 {
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3 {
+  font-weight: 700 !important;
+  color: var(--text) !important;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button,
+.stButton button,
+.stDownloadButton button,
+.MuiBox-root button {
+  background: linear-gradient(90deg, var(--accent), #7EDB0E) !important;
+  color: #05100A !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 0.5rem 1.4rem !important;
+  font-family: var(--font) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 0 0 rgba(163,255,18,0);
+}
+
+button:hover,
+.stButton button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(163, 255, 18, 0.35);
+}
+
+/* secondary/ghost buttons */
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-secondaryFormSubmit"] {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 999px !important;
+}
+
+/* =========================================================
+   INPUTS & TEXT ELEMENTS
+========================================================= */
+
+p,
+li,
+code {
+  font-family: var(--font) !important;
+  background: transparent !important;
+  color: var(--text) !important;
+}
+
+input,
+textarea,
+[data-testid="stSelectbox"] > div > div,
+[data-baseweb="select"] > div,
+[data-baseweb="popover"] ul,
+[data-baseweb="menu"] {
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font) !important;
+  background-color: var(--bg-panel-2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* =========================================================
+   METRICS (e.g. calories, reps, streaks)
+========================================================= */
+
+[data-testid="stMetric"] {
+  background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-panel));
+  border: 1px solid var(--border);
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+}
+
+[data-testid="stMetric"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-testid="stMetricValue"] {
+  font-size: 1.7rem !important;
+  font-weight: 800 !important;
+  color: var(--accent) !important;
+}
+
+[data-testid="stMetricLabel"] {
+  font-size: 13px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+}
+
+[data-testid="stMetricDelta"] {
+  color: var(--accent-2) !important;
+}
+
+/* =========================================================
+   CONTAINERS / CARDS
+========================================================= */
+
+.stContainer,
+.stExpander,
+.stTabs,
+.stColumns,
+.stPopover,
+.stAlertContainer,
+.stStatusContainer,
+.stMetric,
+.stTable,
+.stDataFrame,
+.stForm,
+.stSelectbox,
+[data-baseweb="select"] > div,
+[data-testid="stForm"],
+[data-testid="stMetric"],
+[data-testid="stNumberInputContainer"],
+[data-testid="stDataFrameColumnMenu"],
+[data-testid="stHeadingWithActionElements"],
+[data-testid="stCaptionContainer"] p,
+[data-testid="stAlertContentInfo"] p,
+[data-testid="stSidebarNavLink"],
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+div[role="menu"],
+div[role="menuitem"] {
+  border-radius: var(--radius) !important;
+  font-family: var(--font) !important;
+}
+
+.stExpander,
+[data-testid="stForm"] {
+  background-color: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* =========================================================
+   TABS (workout day selectors etc.)
+========================================================= */
+
+.stTabs [data-baseweb="tab-list"] {
+  gap: 4px;
+  background-color: var(--bg-panel-2);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+  border-radius: 999px !important;
+  color: var(--text-dim);
+}
+
+.stTabs [aria-selected="true"] {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+  color: #05100A !important;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PROGRESS BAR (great for workout completion)
+========================================================= */
+
+[data-testid="stProgress"] > div > div {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+  border-radius: 999px !important;
+}
+
+/* =========================================================
+   DATAFRAME
+========================================================= */
+
+.stDataFrame,
+.stDataFrame div,
+.stDataFrameGlideDataEditor {
+  border-radius: var(--radius) !important;
+  font-family: var(--font) !important;
+}
+
+/* =========================================================
+   INTERACTIVE ELEMENTS
+========================================================= */
+
+.stTextInput,
+.stTextArea,
+.stNumberInput,
+.stSlider,
+.stMultiselect,
+.stRadio,
+.stCheckbox,
+.stToggle,
+.stFileUploader,
+.stColorPicker,
+.stDateInput,
+.stTimeInput,
+.stCameraInput,
+[data-testid="stTextInput"] > div,
+[data-testid="stButton"] button,
+[data-testid="stStatusWidget"] {
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font) !important;
+}
+
+/* slider handle in accent color */
+[data-testid="stSlider"] [role="slider"] {
+  background-color: var(--accent) !important;
+  border: 2px solid #05100A !important;
+}
+
+[data-testid="stSlider"] > div > div > div {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+}
+
+/* =========================================================
+   ALERTS (e.g. "PR beaten!", "rest day")
+========================================================= */
+
+[data-testid="stAlertContentSuccess"] {
+  background-color: rgba(163, 255, 18, 0.12) !important;
+  border-left: 3px solid var(--accent) !important;
+}
+
+[data-testid="stAlertContentWarning"] {
+  background-color: rgba(255, 106, 61, 0.12) !important;
+  border-left: 3px solid var(--accent-2) !important;
+}
+
+/* =========================================================
+   MARKDOWN
+========================================================= */
+
+[data-testid="stMarkdownContainer"] strong {
+  color: var(--accent);
+  font-family: var(--font) !important;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.stForm {
+  margin-top: 2rem !important;
+  padding: 1.6rem 1.4rem !important;
+  background-color: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text);
+}
